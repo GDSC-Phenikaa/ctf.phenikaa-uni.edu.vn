@@ -1,0 +1,34 @@
+[
+    {
+        "id": "mock-challenge",
+        "title": "Mock Challenge",
+        "description": "This is a mock challenge for testing purposes.",
+        "difficulty": "easy",
+        "type": "pwn",
+        "points": 100,
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z",
+        "author": {
+            "name": "John Doe",
+            "profileUrl": "/users/johndoe"
+        },
+        "docker": true,
+        "solved": false
+    },
+    {
+        "id": "mock-challenge",
+        "title": "Mock Challenge",
+        "description": "This is a mock challenge for testing purposes.",
+        "difficulty": "easy",
+        "type": "pwn",
+        "points": 100,
+        "createdAt": "2023-10-01T00:00:00Z",
+        "updatedAt": "2023-10-01T00:00:00Z",
+        "author": {
+            "name": "John Doe",
+            "profileUrl": "/users/johndoe"
+        },
+        "docker": true,
+        "solved": true
+    }
+]
