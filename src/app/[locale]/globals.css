@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'SuperBubble';
+  src: url('/fonts/Super Bubble.ttf');
+  font-weight: 0;
+  font-style: normal;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+/* }
+body > div {
+  height: 100%;
+} */

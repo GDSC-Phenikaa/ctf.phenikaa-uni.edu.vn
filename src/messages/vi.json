@@ -1,0 +1,58 @@
+{
+    "navigation": {
+        "home": "Trang chủ",
+        "challenges": "Thử thách",
+        "teams": "Đội",
+        "scoreboard": "Bảng điểm",
+        "admin": "Quản trị",
+        "logout": "Đăng xuất",
+        "loginButton": "Đăng nhập",
+        "profile": "Hồ sơ",
+        "logoutButton": "Đăng xuất"
+    },
+    "login": {
+        "button": "Đăng nhập",
+        "username": "Tên đăng nhập",
+        "password": "Mật khẩu",
+        "title": "Chào mừng bạn đến với PKA CTF",
+        "noAccount": "Chưa có tài khoản?",
+        "registerHere": "Đăng ký tại đây"
+    },
+    "footer": {
+        "copyright": "Bản quyền © 2025 PKA CTF."
+    },
+    "register": {
+        "fullName": "Họ và tên",
+        "title": "Đăng ký tài khoản PKA CTF",
+        "username": "Tên đăng nhập",
+        "password": "Mật khẩu",
+        "confirmPassword": "Xác nhận mật khẩu",
+        "email": "Email",
+        "registerButton": "Đăng ký",
+        "alreadyHaveAccount": "Đã có tài khoản?",
+        "loginHere": "Đăng nhập tại đây"
+    },
+    "challenges": {
+        "select-placeholder": "Sort by",
+        "filter": {
+            "htl": "Điểm (Cao đến Thấp)",
+            "lth": "Điểm (Thấp đến Cao)",
+            "taz": "Tiêu đề A-Z",
+            "tza": "Tiêu đề Z-A",
+            "difficulty": "Độ khó",
+            "solvedfirst" : "Đã giải trước",
+            "unsolvedfirst" : "Chưa giải trước"
+        },
+        "solves": "lượt giải",
+        "points": "Điểm",
+        "difficulty": "độ khó",
+        "title": "Thử thách",
+        "alreadySolved": "Bạn đã giải bài này.",
+        "submit": "Nộp cờ",
+        "submitting": "Đang nộp...",
+        "flag": "Cờ",
+        "spawn-docker": "Khởi động Docker",
+        "submitSuccess": "Chúc mừng! Cờ đã chính xác",
+        "submitError": "Cờ không chính xác hoặc đã được nộp trước đó"
+    }
+}
