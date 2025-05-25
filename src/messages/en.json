@@ -1,0 +1,63 @@
+{
+    "navigation": {
+        "home": "Home",
+        "challenges": "Challenges",
+        "teams": "Teams",
+        "scoreboard": "Scoreboard",
+        "admin": "Admin",
+        "logout": "Logout",
+        "loginButton": "Login",
+        "profile": "Profile",
+        "logoutButton": "Sign out"
+
+    },
+
+    "login": {
+        "button": "Login",
+        "username": "Username",
+        "password": "Password",
+        "title": "Login to PKA CTF",
+        "noAccount": "Don't have an account?",
+        "registerHere": "Register here"
+    },
+
+    "footer": {
+        "copyright": "Copyright © 2025 PKA CTF."
+    },
+
+    "register": {
+        "fullName": "Full Name",
+        "title": "Register for PKA CTF",
+        "username": "Username",
+        "password": "Password",
+        "confirmPassword": "Confirm Password",
+        "email": "Email",
+        "registerButton": "Register",
+        "alreadyHaveAccount": "Already have an account?",
+        "loginHere": "Login here"
+    },
+
+    "challenges": {
+        "select-placeholder": "Sort by",
+        "filter": {
+            "htl": "Points (High to Low)",
+            "lth": "Points (Low to High)",
+            "taz": "Title A-Z",
+            "tza": "Title Z-A",
+            "difficulty": "Difficulty",
+            "solvedfirst" : "Solved First",
+            "unsolvedfirst" : "Unsolved First"
+        },
+        "solves": "Solves",
+        "points": "Points",
+        "difficulty": "Difficulty",
+        "title": "Challenges",
+        "alreadySolved": "You have already solved this challenge.",
+        "submit": "Submit",
+        "submitting": "Submitting...",
+        "flag": "Flag",
+        "spawn-docker": "Spawn Docker",
+        "submitSuccess": "Congratulations! The flag is correct.",
+        "submitError": "The flag is incorrect or has already been submitted."
+    }
+}
