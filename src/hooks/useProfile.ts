@@ -5,6 +5,7 @@ type ProfileResponse = {
   name?: string;
   username?: string;
   email?: string;
+  isAdmin?: boolean;
 };
 
 export function useProfile() {
