@@ -1,6 +1,6 @@
 "use client"
 import { Group, ActionIcon, Button, Text, Menu, useComputedColorScheme, useMantineColorScheme } from "@mantine/core";
-import { IconHome, IconFlag, IconScoreboard, IconUser, IconSun, IconMoon, IconLogout } from "@tabler/icons-react";
+import { IconHome, IconFlag, IconScoreboard, IconUser, IconSun, IconMoon, IconLogout, IconBook, IconSettings } from "@tabler/icons-react";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 import { useTranslations, useLocale } from "next-intl";
 import { useProfile } from "../../hooks/useProfile";
@@ -39,6 +39,16 @@ export default function Navbar() {
                     <IconUser size={18} style={{ marginRight: 6 }} />
                     {t("navigation.profile")}
                 </Text>
+                <Text component="a" href="/lms/modules" mx="sm" style={{ display: "flex", alignItems: "center" }}>
+                    <IconBook size={18} style={{ marginRight: 6 }} />
+                    {t("navigation.lms")}
+                </Text>
+                {profile?.isAdmin && (
+                    <Text component="a" href="/admin" mx="sm" style={{ display: "flex", alignItems: "center" }}>
+                        <IconSettings size={18} style={{ marginRight: 6 }} />
+                        {t("navigation.admin")}
+                    </Text>
+                )}
             </Group>
             <Group gap={2}>
                 <LanguageSwitcher currentLocale={currentLocale} />

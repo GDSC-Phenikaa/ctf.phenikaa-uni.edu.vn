@@ -8,7 +8,8 @@
         "logout": "Logout",
         "loginButton": "Login",
         "profile": "Profile",
-        "logoutButton": "Sign out"
+        "logoutButton": "Sign out",
+        "lms": "Learning Hub"
 
     },
 

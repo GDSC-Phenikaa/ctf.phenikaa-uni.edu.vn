@@ -8,7 +8,8 @@
         "logout": "Đăng xuất",
         "loginButton": "Đăng nhập",
         "profile": "Hồ sơ",
-        "logoutButton": "Đăng xuất"
+        "logoutButton": "Đăng xuất",
+        "lms": "Học tập"
     },
     "login": {
         "button": "Đăng nhập",
