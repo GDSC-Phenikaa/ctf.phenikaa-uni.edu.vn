@@ -1,9 +1,10 @@
 "use client"
 import { Group, ActionIcon, Button, Text, Menu, useComputedColorScheme, useMantineColorScheme } from "@mantine/core";
-import { IconHome, IconFlag, IconScoreboard, IconUser, IconSun, IconMoon, IconLogout, IconBook, IconSettings } from "@tabler/icons-react";
+import { IconHome, IconFlag, IconScoreboard, IconUser, IconSun, IconMoon, IconLogout, IconBook, IconSettings, IconTerminal2 } from "@tabler/icons-react";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 import { useTranslations, useLocale } from "next-intl";
 import { useProfile } from "../../hooks/useProfile";
+import { Link, useRouter } from "../../i18n/navigation";
 import classes from "./Navbar.module.css";
 import cx from 'clsx'; 
 
@@ -12,6 +13,7 @@ export default function Navbar() {
     const computedColorScheme = useComputedColorScheme('light', { getInitialValueInEffect: true });
     const t = useTranslations();
     const currentLocale = useLocale();
+    const router = useRouter();
     const { data: profile } = useProfile();
 
     const handleLogout = () => {
@@ -23,28 +25,34 @@ export default function Navbar() {
         <Group h="100%" px="md" justify="space-between">
             <Group>
                 {/* Top navigation links */}
-                <Text component="a" href="/" mx="sm" style={{ display: "flex", alignItems: "center" }}>
+                <Text component={Link} href="/" mx="sm" style={{ display: "flex", alignItems: "center" }}>
                     <IconHome size={18} style={{ marginRight: 6 }} />
                     {t("navigation.home")}
                 </Text>
-                <Text component="a" href="/challenges" mx="sm" style={{ display: "flex", alignItems: "center" }}>
+                <Text component={Link} href="/challenges" mx="sm" style={{ display: "flex", alignItems: "center" }}>
                     <IconFlag size={18} style={{ marginRight: 6 }} />
                     {t("navigation.challenges")}
                 </Text>
-                <Text component="a" href="/scoreboard" mx="sm" style={{ display: "flex", alignItems: "center" }}>
+                <Text component={Link} href="/scoreboard" mx="sm" style={{ display: "flex", alignItems: "center" }}>
                     <IconScoreboard size={18} style={{ marginRight: 6 }} />
                     {t("navigation.scoreboard")}
                 </Text>
-                <Text component="a" href="/profile" mx="sm" style={{ display: "flex", alignItems: "center" }}>
+                <Text component={Link} href="/profile" mx="sm" style={{ display: "flex", alignItems: "center" }}>
                     <IconUser size={18} style={{ marginRight: 6 }} />
                     {t("navigation.profile")}
                 </Text>
-                <Text component="a" href="/lms/modules" mx="sm" style={{ display: "flex", alignItems: "center" }}>
+                <Text component={Link} href="/lms/modules" mx="sm" style={{ display: "flex", alignItems: "center" }}>
                     <IconBook size={18} style={{ marginRight: 6 }} />
                     {t("navigation.lms")}
                 </Text>
+                {profile && (
+                    <Text component={Link} href="/workspace" mx="sm" style={{ display: "flex", alignItems: "center" }}>
+                        <IconTerminal2 size={18} style={{ marginRight: 6 }} />
+                        {t("navigation.pwnbox")}
+                    </Text>
+                )}
                 {profile?.isAdmin && (
-                    <Text component="a" href="/admin" mx="sm" style={{ display: "flex", alignItems: "center" }}>
+                    <Text component={Link} href="/admin" mx="sm" style={{ display: "flex", alignItems: "center" }}>
                         <IconSettings size={18} style={{ marginRight: 6 }} />
                         {t("navigation.admin")}
                     </Text>
@@ -84,7 +92,7 @@ export default function Navbar() {
                         </Menu.Dropdown>
                     </Menu>
                 ) : (
-                    <Button variant="filled" onClick={() => window.location.href = "/login"}>
+                    <Button variant="filled" onClick={() => router.push("/login")}>
                         {t("navigation.loginButton")}
                     </Button>
                 )}                        

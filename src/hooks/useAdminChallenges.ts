@@ -21,7 +21,7 @@ export function useAdminChallenges() {
     queryFn: async () => {
       if (!token) return [];
 
-      const res = await fetch("http://localhost:3333/admin/challenges/list", {
+      const res = await fetch("https://ctf-backend.caxtiq.me/admin/challenges/list", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -32,7 +32,8 @@ export function useAdminChallenges() {
       if (!res.ok) {
         throw new Error("Failed to fetch admin challenges");
       }
-      return res.json();
+      const data = await res.json();
+      return data.challenges || [];
     },
     enabled: !!token,
   });
@@ -45,7 +46,7 @@ export function useCreateChallenge() {
     mutationFn: async (data: AdminChallenge) => {
       const token = localStorage.getItem("token");
 
-      const res = await fetch("http://localhost:3333/admin/challenges/create", {
+      const res = await fetch("https://ctf-backend.caxtiq.me/admin/challenges/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -73,7 +74,7 @@ export function useUpdateChallenge() {
     mutationFn: async ({ id, data }: { id: number; data: AdminChallenge }) => {
       const token = localStorage.getItem("token");
 
-      const res = await fetch(`http://localhost:3333/admin/challenges/${id}`, {
+      const res = await fetch(`https://ctf-backend.caxtiq.me/admin/challenges/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

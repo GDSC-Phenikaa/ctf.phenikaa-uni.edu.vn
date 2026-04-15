@@ -23,7 +23,7 @@ export function useModules() {
     queryFn: async () => {
       if (!token) return [];
 
-      const res = await fetch("http://localhost:3333/user/lms/modules", {
+      const res = await fetch("https://ctf-backend.caxtiq.me/user/lms/modules", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

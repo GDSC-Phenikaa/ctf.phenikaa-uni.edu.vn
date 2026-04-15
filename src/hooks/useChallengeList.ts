@@ -29,7 +29,7 @@ export function useChallengeList() {
         throw new Error("Unauthorized: No token found");
       }
 
-      const res = await fetch("http://localhost:3333/user/challenges/list", {
+      const res = await fetch("https://ctf-backend.caxtiq.me/user/challenges/list", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

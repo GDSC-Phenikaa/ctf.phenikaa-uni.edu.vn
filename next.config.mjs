@@ -9,6 +9,7 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ["@mantine/core", "@mantine/hooks"],
   },
+  assetPrefix: "https://ctf-demo.caxtiq.me",
 };
 
 export default withNextIntl(nextConfig)

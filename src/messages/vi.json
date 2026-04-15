@@ -55,5 +55,15 @@
         "spawn-docker": "Khởi động Docker",
         "submitSuccess": "Chúc mừng! Cờ đã chính xác",
         "submitError": "Cờ không chính xác hoặc đã được nộp trước đó"
+    },
+    "scoreboardPage": {
+        "title": "Bảng điểm",
+        "ctf": "Cuộc thi CTF",
+        "lms": "Khu vực Học tập",
+        "rank": "Hạng",
+        "participant": "Người tham gia",
+        "score": "Điểm",
+        "loading": "Đang tải bảng điểm...",
+        "error": "Không thể tải bảng điểm"
     }
 }

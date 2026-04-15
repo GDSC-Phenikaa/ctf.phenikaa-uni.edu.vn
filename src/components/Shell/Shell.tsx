@@ -10,6 +10,8 @@ import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useProfile } from "../../hooks/useProfile";
 import Navbar from "../Navbar/Navbar";
+import GlobalAssistant from "../Assistant/GlobalAssistant";
+import GlobalNotes from "../Notes/GlobalNotes";
 
 type ShellProps = {
     children: ReactNode;
@@ -49,6 +51,8 @@ export default function Shell({ children }: ShellProps) {
                         </Text>
                     </Group>
                 </AppShell.Footer>
+                <GlobalAssistant />
+                <GlobalNotes />
             </AppShell>
         </QueryClientProvider>
     )

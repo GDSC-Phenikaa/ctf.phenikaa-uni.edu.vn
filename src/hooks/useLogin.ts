@@ -14,7 +14,7 @@ type LoginResponse = {
 export function useLogin() {
   return useMutation<LoginResponse, Error, LoginInput>({
     mutationFn: async (data: LoginInput) => {
-      const res = await fetch("http://localhost:3333/user/login", {
+      const res = await fetch("https://ctf-backend.caxtiq.me/user/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),

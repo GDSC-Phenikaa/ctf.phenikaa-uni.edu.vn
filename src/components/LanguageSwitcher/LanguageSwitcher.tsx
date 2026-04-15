@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@mantine/core";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter, usePathname } from "../../i18n/navigation";
 
 type LanguageSwitcherProps = {
   currentLocale: string;
@@ -13,9 +13,7 @@ export default function LanguageSwitcher({ currentLocale }: LanguageSwitcherProp
   const otherLocale = currentLocale === "en" ? "vi" : "en";
 
   const handleLocaleChange = () => {
-    const segments = pathname.split("/");
-    segments[1] = otherLocale;
-    router.push(segments.join("/") || "/");
+    router.replace(pathname, { locale: otherLocale });
   };
 
   return (

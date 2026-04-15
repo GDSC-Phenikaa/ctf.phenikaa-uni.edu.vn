@@ -2,7 +2,7 @@
 
 import { useModules } from "../../../../hooks/useModules";
 import { Container, Title, Text, Card, Group, Stack, Loader, Center, Button, Badge } from "@mantine/core";
-import { useRouter } from "next/navigation";
+import { useRouter } from "../../../../i18n/navigation";
 import { IconBook } from "@tabler/icons-react";
 
 export default function LmsModulesPage() {
@@ -31,7 +31,7 @@ export default function LmsModulesPage() {
       <Text c="dimmed" mb="xl">Explore our curated learning materials and quizzes to improve your skills.</Text>
 
       <Stack gap="xl">
-        {modules.sort((a,b)=>a.order - b.order).map((mod) => (
+        {[...modules].sort((a,b)=>a.order - b.order).map((mod) => (
           <Card key={mod.id} shadow="sm" padding="lg" radius="md" withBorder>
             <Group justify="space-between" mb="xs">
               <Title order={3}>{mod.order}. {mod.title}</Title>
@@ -42,7 +42,7 @@ export default function LmsModulesPage() {
             </Text>
 
             <Stack gap="sm">
-              {mod.lessons?.sort((a,b)=>a.order - b.order).map((lesson) => (
+              {[...(mod.lessons || [])].sort((a,b)=>a.order - b.order).map((lesson) => (
                 <Card key={lesson.id} withBorder shadow="none" padding="sm" radius="md">
                   <Group justify="space-between">
                     <Group>

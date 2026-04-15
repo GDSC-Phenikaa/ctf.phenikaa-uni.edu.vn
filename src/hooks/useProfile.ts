@@ -16,7 +16,7 @@ export function useProfile() {
     queryFn: async () => {
       if (!token) return null;
 
-      const res = await fetch("http://localhost:3333/profile", {
+      const res = await fetch("https://ctf-backend.caxtiq.me/profile", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

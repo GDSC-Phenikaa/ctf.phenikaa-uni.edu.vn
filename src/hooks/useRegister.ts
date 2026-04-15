@@ -16,7 +16,7 @@ type RegisterResponse = {
 export function useRegister() {
   return useMutation<RegisterResponse, Error, RegisterInput>({
     mutationFn: async (data: RegisterInput) => {
-      const res = await fetch("http://localhost:3333/user/register", {
+      const res = await fetch("https://ctf-backend.caxtiq.me/user/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),

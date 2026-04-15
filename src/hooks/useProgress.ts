@@ -15,7 +15,7 @@ export function useProgress() {
     queryFn: async () => {
       if (!token) return [];
 
-      const res = await fetch("http://localhost:3333/user/lms/progress", {
+      const res = await fetch("https://ctf-backend.caxtiq.me/user/lms/progress", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

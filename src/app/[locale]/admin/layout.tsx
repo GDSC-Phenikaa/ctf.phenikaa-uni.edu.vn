@@ -3,6 +3,7 @@
 import { Box, Group, NavLink, Paper, Title } from "@mantine/core";
 import { IconDashboard, IconFlag, IconBook } from "@tabler/icons-react";
 import { usePathname } from "next/navigation";
+import { Link } from "../../../i18n/navigation";
 import React from "react";
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
@@ -35,6 +36,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         <Title order={4} mb="lg" c="dimmed">Admin Controls</Title>
 
         <NavLink
+          component={Link}
           href="/admin"
           label="Dashboard"
           leftSection={<IconDashboard size={18} stroke={1.5} />}
@@ -44,6 +46,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           style={{ borderRadius: 6 }}
         />
         <NavLink
+          component={Link}
           href="/admin/challenges"
           label="Challenges Management"
           leftSection={<IconFlag size={18} stroke={1.5} />}
@@ -53,6 +56,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           style={{ borderRadius: 6 }}
         />
         <NavLink
+          component={Link}
           href="/admin/lms"
           label="LMS Content Management"
           leftSection={<IconBook size={18} stroke={1.5} />}

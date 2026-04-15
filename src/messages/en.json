@@ -9,7 +9,8 @@
         "loginButton": "Login",
         "profile": "Profile",
         "logoutButton": "Sign out",
-        "lms": "Learning Hub"
+        "lms": "Learning Hub",
+        "pwnbox": "Pwnbox"
 
     },
 
@@ -60,5 +61,33 @@
         "spawn-docker": "Spawn Docker",
         "submitSuccess": "Congratulations! The flag is correct.",
         "submitError": "The flag is incorrect or has already been submitted."
+    },
+    "scoreboardPage": {
+        "title": "Scoreboard",
+        "ctf": "CTF Competition",
+        "lms": "Learning Hub",
+        "rank": "Rank",
+        "participant": "Participant",
+        "score": "Score",
+        "loading": "Loading scoreboard...",
+        "error": "Failed to load scoreboard"
+    },
+    "workspace": {
+        "title": "Pwnbox",
+        "description": "Your personal, isolated hacking environment. A full Ubuntu desktop spun up just for you — no VPN, no setup.",
+        "launch": "Launch Pwnbox",
+        "stop": "Stop Pwnbox",
+        "stopping": "Stopping...",
+        "starting": "Starting your machine...",
+        "running": "Running",
+        "fullscreen": "Fullscreen",
+        "confirmStop": "This will destroy your workspace and all unsaved progress. Are you sure?",
+        "confirmStopYes": "Yes, stop it",
+        "cancelStop": "Cancel",
+        "specs": "2 vCPU · 4 GB RAM · Ubuntu Desktop",
+        "tip": "Your workspace will automatically expire after 2 hours of inactivity.",
+        "notLoggedIn": "You must be logged in to use Pwnbox.",
+        "errorStart": "Failed to start workspace. Please try again.",
+        "errorStop": "Failed to stop workspace. Please try again."
     }
 }

@@ -1,22 +1,28 @@
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+
+export type AnswerValue = string | number | boolean | string[];
 
 type SubmitAnswerInput = {
   questionId: number;
-  answer: string;
+  answer: AnswerValue;
 };
 
 type SubmitAnswerResponse = {
   status: string;
   correct: boolean;
+  awarded_points?: number;
+  normalized_answer?: string;
   message?: string;
 };
 
 export function useSubmitAnswer() {
+  const queryClient = useQueryClient();
+
   return useMutation<SubmitAnswerResponse, Error, SubmitAnswerInput>({
     mutationFn: async ({ questionId, answer }) => {
       const token = localStorage.getItem("token");
 
-      const res = await fetch(`http://localhost:3333/user/lms/questions/${questionId}/submit`, {
+      const res = await fetch(`https://ctf-backend.caxtiq.me/user/lms/questions/${questionId}/submit`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -31,6 +37,9 @@ export function useSubmitAnswer() {
       }
 
       return res.json();
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["lms-progress"] });
     },
   });
 }

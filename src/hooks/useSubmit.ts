@@ -15,7 +15,7 @@ export function useSubmitFlag() {
     mutationFn: async (data: SubmitFlagInput) => {
       const token = localStorage.getItem("token");
 
-      const res = await fetch("http://localhost:3333/user/challenges/submit", {
+      const res = await fetch("https://ctf-backend.caxtiq.me/user/challenges/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
