@@ -164,7 +164,10 @@ export default function LessonPage(props: { params: Promise<{ id: string }> }) {
           <TextInput
             placeholder="Type your answer"
             value={typeof currentAnswer === "string" ? currentAnswer : ""}
-            onChange={(e) => setAnswers((prev) => ({ ...prev, [question.id]: e.currentTarget.value }))}
+            onChange={(e) => {
+              const val = e.currentTarget.value;
+              setAnswers((prev) => ({ ...prev, [question.id]: val }));
+            }}
           />
         );
       case "long_text":
@@ -175,7 +178,10 @@ export default function LessonPage(props: { params: Promise<{ id: string }> }) {
             autosize
             placeholder={question.type === "code" ? "Write your code answer" : "Type your answer"}
             value={typeof currentAnswer === "string" ? currentAnswer : ""}
-            onChange={(e) => setAnswers((prev) => ({ ...prev, [question.id]: e.currentTarget.value }))}
+            onChange={(e) => {
+              const val = e.currentTarget.value;
+              setAnswers((prev) => ({ ...prev, [question.id]: val }));
+            }}
           />
         );
       case "numeric":
